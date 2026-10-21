@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="bs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Prijava za rafting</title>
+  </head>
+  <body>
+    <h1>Prijava za rafting</h1>
+    <p>Popunite formu kako biste se prijavili za rafting avanturu.</p>
+
+    <form>
+      <!-- Tekstualni unos -->
+      <label for="ime">Ime i prezime:</label><br />
+      <input type="text" id="ime" name="ime" /><br /><br />
+
+      <label for="telefon">Broj telefona:</label><br />
+      <input type="text" id="telefon" name="telefon" /><br /><br />
+
+      <!-- Izbor tačno jedne opcije: radio buttons -->
+      <p>Izaberite rijeku:</p>
+      <input type="radio" id="neretva" name="rijeka" value="neretva" />
+      <label for="neretva">Neretva</label><br />
+      <input type="radio" id="una" name="rijeka" value="una" />
+      <label for="una">Una</label><br /><br />
+
+      <!-- Izbor tačno jedne opcije: select -->
+      <label for="grupa">Broj osoba u grupi:</label>
+      <select id="grupa" name="grupa">
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+      <br /><br />
+
+      <!-- Izbor više opcija: checkboxovi -->
+      <p>Dodatne usluge (možete izabrati više opcija):</p>
+      <input type="checkbox" id="prijevoz" name="usluge" value="prijevoz" />
+      <label for="prijevoz">Prijevoz do rijeke</label><br />
+      <input type="checkbox" id="foto" name="usluge" value="foto" />
+      <label for="foto">Fotografije i video snimak spusta</label><br />
+      <input type="checkbox" id="rucak" name="usluge" value="rucak" />
+      <label for="rucak">Ručak nakon rafting-a</label><br />
+      <input type="checkbox" id="oprema" name="usluge" value="oprema" />
+      <label for="oprema">Najam opreme (neopren, cipele)</label><br /><br />
+
+      <input type="submit" value="Pošalji prijavu" />
+    </form>
+
+    <!--
+      Za izbor rijeke koristio sam radio buttons grupu umjesto select elementa zato sto imaju samo dvije opcije.
+      Select bi imao vise smisla kada bi opcija bilo mnogo.
+
+      Za broj osoba u grupi koristio sam select jer je moguć samo jedan izbor.
+
+      Za dodatne usluge koristio sam checkboxove jer je najlogicnije. Korisnik moze da bure nijednu, jednu ili vise usluga istovremeno, a izbor jedne usluge ne isključuje ostale.
+    -->
+  </body>
+</html>

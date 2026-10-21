@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="bs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Sarajevo Walking Tour - Vodič</title>
+  </head>
+  <body>
+    <h1>Besplatne ture po Sarajevu!</h1>
+
+    <h2>O nama</h2>
+    <p>
+      Dobrodošli u Sarajevo! Ture su namijenjene
+      turistima i posjetiocima grada koji žele upoznati historiju i kulturu
+      Sarajeva uz stručno vodstvo lokalnih vodiča.
+    </p>
+    <p>
+      Tokom dana organizirat ćemo nekoliko šetnji kroz grad. Svaka tura traje
+      oko dva sata, a vodiči govore bosanski, engleski i njemački jezik.
+    </p>
+    <img
+      src="images/bascarsija.jpg"
+      alt="Sebilj na Baščaršiji u Sarajevu, drvena fontana okružena golubovima"
+    />
+
+    <h2>Vrijeme, mjesto i prijava</h2>
+    <p>
+      Ture se održavaju svakim radnim danom (osim srijedom) od 10:00 do 18:00 sati. Okupljanje
+      je ispred Sebilja na Baščaršiji.
+    </p>
+    <p>Kako se prijaviti na turu:</p>
+    <ol>
+      <li>Izaberite turu koja vas zanima.</li>
+      <li>Popunite formu za prijavu ispod.</li>
+      <li>Na dan događaja dođite 15 minuta prije početka ture.</li>
+    </ol>
+
+    <p>Dostupne ture:</p>
+    <ul>
+      <li>Stari grad i Baščaršija</li>
+      <li>Austro-ugarsko Sarajevo</li>
+      <li>Tunel spasa</li>
+    </ul>
+
+    <p>
+      Više informacija o gradu možete naći na stranici
+      <a href="https://www.visitsarajevo.ba/">Visit Sarajevo</a>.
+    </p>
+
+    <h2>Prijava na turu</h2>
+    <form>
+      <label for="ime">Ime i prezime:</label><br />
+      <input type="text" id="ime" name="ime" /><br /><br />
+
+      <label for="tura">Izaberite turu:</label>
+      <select id="tura" name="tura">
+        <option value="stari-grad">Stari grad i Baščaršija</option>
+        <option value="austro-ugarska">Austro-ugarsko Sarajevo</option>
+        <option value="tunel">Tunel spasa</option>
+      </select>
+      <br /><br />
+
+      <p>Jezik ture:</p>
+      <input type="radio" id="bs" name="jezik" value="bosanski" />
+      <label for="bs">Bosanski</label><br />
+      <input type="radio" id="en" name="jezik" value="engleski" />
+      <label for="en">Engleski</label><br />
+      <input type="radio" id="de" name="jezik" value="njemacki" />
+      <label for="de">Njemački</label><br /><br />
+
+      <input type="checkbox" id="podsjetnik" name="podsjetnik" />
+      <label for="podsjetnik">Želim primiti podsjetnik prije ture</label>
+      <br /><br />
+
+      <input type="submit" value="Prijavi se" />
+    </form>
+  </body>
+</html>
