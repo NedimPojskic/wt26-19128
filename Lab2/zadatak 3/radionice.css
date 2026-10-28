@@ -1,0 +1,30 @@
+body {
+    font-family: Verdana;
+    background-color: #fde2f3;
+}
+
+#glavni-naslov {
+    color: #9b5de5;
+    text-align: center;
+}
+
+.ponuda {
+    background-color: #e2f0fb;
+    border: 2px solid #b5c9e8;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+.ponuda h2 {
+    color: #5a8f7b;
+}
+
+.info {
+    font-style: italic;
+}
+
+.preporuceno {
+    background-color: #fff6c9;
+    border: 2px solid #f7b267;
+}

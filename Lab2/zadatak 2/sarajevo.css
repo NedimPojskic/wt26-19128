@@ -1,0 +1,39 @@
+body {
+    font-family: Verdana;
+    background-color: lightgray;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border: 2px solid black;
+    text-decoration: none;
+    width: 200px;
+    /* display: inline; */
+    display: block;
+}
+
+a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: darkblue;
+}
+
+.odjeljak {
+    background-color: white;
+    padding: 10px;
+    margin-top: 15px;
+}
