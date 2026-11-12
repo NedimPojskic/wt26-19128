@@ -12,7 +12,7 @@ function sakrijGresku() {
 
 function osvjeziZbir() {
   const tijelo = document.getElementById("tijelo");
-  const brojStavki = tijelo.rows.length - 1;
+  const brojStavki = tijelo.rows.length - 2;
   let zbir = 0;
 
   for (let i = 0; i < brojStavki; i++) {
@@ -22,6 +22,21 @@ function osvjeziZbir() {
   document.getElementById("zbir-naziv").textContent =
     "Ukupno (broj stavki: " + brojStavki + ")";
   document.getElementById("zbir-iznos").textContent = zbir.toFixed(2);
+}
+
+function osvjeziProsjek() {
+  const tijelo = document.getElementById("tijelo");
+  const brojStavki = tijelo.rows.length - 2;
+  let zbir = 0;
+
+  for (let i = 0; i < brojStavki; i++) {
+    zbir += Number(tijelo.rows[i].cells[1].textContent);
+  }
+
+  const prosjek = brojStavki > 0 ? zbir / brojStavki : 0;
+
+  document.getElementById("prosjek-naziv").textContent = "Prosjek";
+  document.getElementById("prosjek-iznos").textContent = prosjek.toFixed(2);
 }
 
 function provjeriUnos(naziv, iznosTekst) {
@@ -64,15 +79,17 @@ function dodajStavku(event) {
   const iznos = Number(iznosTekst.replace(",", "."));
   const tijelo = document.getElementById("tijelo");
 
-  const red = tijelo.insertRow(tijelo.rows.length - 1);
+  const red = tijelo.insertRow(tijelo.rows.length - 2);
   red.insertCell(0).textContent = naziv;
   red.insertCell(1).textContent = iznos.toFixed(2);
 
   osvjeziZbir();
+  osvjeziProsjek();
   forma.reset();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("forma").addEventListener("submit", dodajStavku);
   osvjeziZbir();
+  osvjeziProsjek();
 });
