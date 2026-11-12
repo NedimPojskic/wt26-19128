@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zadatak 3 – Evidencija</title>
+  <link rel="stylesheet" href="zadatak3.css">
+  <script src="zadatak3.js" defer></script>
+</head>
+<body>
+  <h1>Evidencija troskova</h1>
+
+  <form id="forma" novalidate>
+    <label for="naziv">Naziv:</label>
+    <input type="text" id="naziv" name="naziv">
+
+    <label for="iznos">Iznos:</label>
+    <input type="text" id="iznos" name="iznos">
+
+    <button type="submit">Dodaj</button>
+  </form>
+
+  <p id="greska" class="greska" role="alert" hidden></p>
+
+  <table id="tabela">
+    <thead>
+      <tr>
+        <th>Naziv</th>
+        <th>Iznos (KM)</th>
+      </tr>
+    </thead>
+    <tbody id="tijelo">
+      <tr>
+        <td>stavka1</td>
+        <td>5.00</td>
+      </tr>
+      <tr>
+        <td>stavka2</td>
+        <td>3.50</td>
+      </tr>
+      <tr>
+        <td>stavka3</td>
+        <td>20.00</td>
+      </tr>
+      <tr id="zbir-red">
+        <td id="zbir-naziv"></td>
+        <td id="zbir-iznos"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

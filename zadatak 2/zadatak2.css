@@ -1,0 +1,13 @@
+.greska {
+  color: red;
+}
+
+.vazno {
+  background: orange;
+  font-weight: bold;
+}
+
+.opce {
+  background: lightblue;
+  font-style: italic;
+}

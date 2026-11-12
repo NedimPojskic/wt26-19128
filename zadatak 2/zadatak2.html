@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zadatak 2 – Obavijest i pregled</title>
+  <link rel="stylesheet" href="zadatak2.css">
+  <script src="zadatak2.js" defer></script>
+</head>
+<body>
+	<main class="raspored">
+		<section class="kartica">
+			<h1>Kreiraj obavijest:</h1>
+			
+			<form id="forma" novalidate>
+				<label for="naslov">Naslov</label>
+				<input type="text" id="naslov" name="naslov" placeholder="Unesi naslov :)">
+				
+				<label for="tekst">Sadrzaj obavijesti</label>
+				<textarea id="tekst" name="tekst" placeholder="Ovdje napisi sadrzaj obavijesti"></textarea>
+				
+				<fieldset>
+					<legend>Kategorija</legend>
+					<label class="opcija">
+						<input type="radio" name="kategorija" value="vazno" checked>Vazno
+					</label>
+					<label class="opcija">
+						<input type="radio" name="kategorija" value="opce">Opce
+					</label>
+				</fieldset>
+				
+				<p id="greska" class="greska" role="alert" hidden></p>
+				
+				<div class="dugmad">
+					<button type="submit" id="pregled-dugme">Pregled</button>
+					<button type="button" id="reset-dugme">Vrati pocetno stanje forme</button>
+				</div>
+			</form>
+		</section>
+		
+		<section class="kartica">
+			<h2 class="sekcija">Pregled</h2>
+			
+			<article id="pregled" class="pregled prazno">
+				<span id="pregled-kategorija" class="oznaka"></span>
+				<h3 id="pregled-naslov">nije prijavljeno jos</h3>
+				<p id="pregled-tekst">popuni formu i predaj</p>
+			</article>
+		</section>
+	</main>
+</body>
+</html>
